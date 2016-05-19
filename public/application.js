@@ -1,15 +1,19 @@
   function randomGenerator() {
-    return Math.random() * (700 - 1) + 1;
+    return Math.random() * (800 - 1) + 1;
   }
 
   function popUpBrowser() {
-    $('.container').append("<div class='browser'><div class='panel panel-default'><button class='btn btn-danger'>x</button><div class='panel-body'>This is a browser</div></div></div>");
+    var categories = ['buildings', 'food', 'nature', 'people', 'technology', 'objects']
+    var randCategory = categories[Math.floor(Math.random() * categories.length)];
+
+    $('.container').append("<div class='browser'><div class='panel panel-default'><button class='btn btn-danger pull-right'>x</button><div class='panel-body'><img src='https://source.unsplash.com/category/"+randCategory+"/400x300'></div></div></div>");
     $('.browser').last().css('position', 'absolute').css('top', randomGenerator() + 'px').css('right', randomGenerator() + 'px');
   }
 
-  function gameOver() {
+  function gameOver(finalScore) {
     $('.end').css('z-index', '10');
     $('.end').css('background-color', 'rgba(250,250,250,0.8)');
+    $('.final-score p').html('Your Score: ' + finalScore);
     $('.final-score').show();
   }
 
@@ -23,7 +27,8 @@ $(document).ready(function(){
 
     setInterval(function(){
       popUpBrowser();
-    }, 1000);
+    }, 500);
+
   })
 
   // removes browser if click on close button
@@ -36,12 +41,13 @@ $(document).ready(function(){
   // minus score if click on panel body
   $('body').on('click', '.panel-body', function(){
     lives -= 1;
+    $('span.glyphicon#' + lives).attr('class', 'glyphicon glyphicon-heart-empty');
     clickCounter -= 3;
     $('#score').text('Score: ' + clickCounter);
 
     // if lives is 0, game over!
     if(lives === 0){
-      gameOver();
+      gameOver(clickCounter);
     }
   })
 
