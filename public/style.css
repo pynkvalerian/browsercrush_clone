@@ -17,27 +17,29 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+	background-color: white;
 }
 
 .container {
   position: relative;
 }
 
+.admin {
+	z-index: 99;
+}
+
+.admin h2, .end h2 {
+	margin-bottom: 0 !important;
+}
+
+.flag img {
+	z-index: 1;
+}
+
 .intro, .final-score {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.browser {
-  border-color: red;
-}
-
-.score {
-  font-size: 20px;
-  position: absolute;
-  top: 90%;
-  transform: translateY(-30%);
 }
 
 .panel-body {
@@ -49,19 +51,10 @@ button#start {
   font-size: 30px;
 }
 
-.glyphicon-heart {
-  color: #BA3839;
-}
-
-
 .final-score {
   display: none;
 }
 
 .final-score p {
   font-size: 20px;
-}
-
-.final-score button {
-  font-size: 30px;
 }

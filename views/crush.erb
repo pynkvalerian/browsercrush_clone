@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BrowserCrush</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <title>Merdeka - Are You fast Enough?</title>
+    <meta property="og:title" content="Merdeka - Are You Fast Enough?">
+    <meta property="og:description" content="Collect as many Malaysian Flags as you can in 15 seconds! Share your top score by tagging #DnaNegarAku">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="application.js"></script>
   </head>
   <body>
     <div class='end'>
       <div class='final-score'>
-        <h1>Oops! You have no more lives!</h1>
-        <p></p>
-        <button class="btn btn-warning" id='restart'>Play again</button>
+        <h1>Time's Up!</h1>
+        <p class="mb-0">You caught</p>
+        <h2 class="mb-0" id="final-score"></h2>
+        <p class="mb-5">Malaysian flags.</p>
+        <button class="btn btn-warning btn-sm" id='restart'>Play again</button>
       </div>
     </div>
+
     <div class="container">
-      <div class="intro">
-        <h1>Crush These Browsers</h1>
-        <h4>Gain points when you close windows.</h4>
-        <h4>Lose points when you don't.</h4>
-        <button class="btn btn-default" id='start'>Start!</button>
+
+      <div class="row justify-content-center align-items-center admin">
+        <div class='col-6 timer'>
+          <h2 id='timer'>15</h2>
+          <p>seconds left</p>
+        </div>
+        <div class='col-6 score'>
+          <h2 id='score'>0</h2>
+          <p>flags collected</p>
+        </div>
       </div>
 
-      <div class='score'>
-        <p id='score'>Score: 0</p>
-        <p><span class='glyphicon glyphicon-heart' id='0'></span><span class='glyphicon glyphicon-heart' id='1'></span><span class='glyphicon glyphicon-heart' id='2'></span></p>
+      <div class="intro">
+        <h1>Grab As Many Malaysian Flags As You Can</h1>
+        <h4>You have 15 seconds.</h4>
+        <h4>Can you make it onto the leaderboard?</h4>
+        <button class="btn btn-danger" id='start'>Start!</button>
       </div>
 
     </div>
