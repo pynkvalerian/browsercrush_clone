@@ -7,13 +7,21 @@ function randomGenerator(direction) {
 }
 
 function popUpFlag() {
-  $('.container').append("<div class='flag'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/1949_Malaya_Flag_Proposal_3.svg/300px-1949_Malaya_Flag_Proposal_3.svg.png' width='100px'></div>");
+  $('.game').append("<div class='flag'><img src='" + window.location.href + "flags/malaysia.svg" + "' width='100px'></div>");
   $('.flag').last().css('position', 'absolute').css('top', randomGenerator('height') + 'px').css('right', randomGenerator('width') + 'px');
 }
 
 function popUpForeignFlag() {
-  $('.container').append("<div class='flag'><img src='https://en.wikipedia.org/wiki/Flag_of_Singapore#/media/File:Flag_of_Singapore.svg' width='100px'></div>");
-  $('.flag').last().css('position', 'absolute').css('top', randomGenerator('height') + 'px').css('right', randomGenerator('width') + 'px');
+  foreignFlags = [
+    "",
+    "flags/indonesia.svg",
+    "flags/singapore.svg",
+    "flags/thailand.svg"
+  ]
+  randomInt = Math.floor(Math.random() * (foreignFlags.length - 1)) + 1;
+
+  $('.game').append("<div class='foreign-flag'><img src='" + window.location.href + foreignFlags[randomInt] + "' width='100px'></div>");
+  $('.foreign-flag').last().css('position', 'absolute').css('top', randomGenerator('height') + 'px').css('right', randomGenerator('width') + 'px');
 }
 
 function shareButtonDimensions(id) {
@@ -67,12 +75,23 @@ $(document).ready(function(){
     setInterval(function(){
       popUpFlag();
     }, 200);
+
+    setInterval(function(){
+      popUpForeignFlag();
+    }, 400);
   })
 
-  // removes flag if click on flag
+  // removes flag + add score if click on malaysian flag
   $('body').on('click', '.flag', function(){
     $(this).remove();
     clickCounter += 1;
+    $('#score').text(clickCounter);
+  })
+
+  // removes flag + minus score if click on foreign flag
+  $('body').on('click', '.foreign-flag', function(){
+    $(this).remove();
+    clickCounter -= 1;
     $('#score').text(clickCounter);
   })
 
