@@ -11,12 +11,25 @@ function popUpFlag() {
   $('.flag').last().css('position', 'absolute').css('top', randomGenerator('height') + 'px').css('right', randomGenerator('width') + 'px');
 }
 
+function popUpForeignFlag() {
+  $('.container').append("<div class='flag'><img src='https://en.wikipedia.org/wiki/Flag_of_Singapore#/media/File:Flag_of_Singapore.svg' width='100px'></div>");
+  $('.flag').last().css('position', 'absolute').css('top', randomGenerator('height') + 'px').css('right', randomGenerator('width') + 'px');
+}
+
+function shareButtonDimensions(id) {
+  $(id).css('height', '100px');
+  $(id).css('width', '100px');
+}
+
 function gameOver(finalScore) {
   $('body').css('position', 'static');
   $('.end').css('z-index', '10');
   $('.end').css('background-color', 'rgba(250,250,250,0.9)');
   $('h2#final-score').text(finalScore);
   $('.final-score').show();
+  shareButtonDimensions('.fb-share-button')
+  shareButtonDimensions('.fb-share-button span')
+  shareButtonDimensions('.fb-share-button span iframe')
 }
 
 function moveBody() {

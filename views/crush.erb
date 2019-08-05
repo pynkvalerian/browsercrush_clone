@@ -16,13 +16,25 @@
     <script src="application.js"></script>
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0&appId=388473914948715&autoLogAppEvents=1"></script>
     <div class='end'>
       <div class='final-score'>
-        <h1>Time's Up!</h1>
-        <p class="mb-0">You caught</p>
-        <h2 class="mb-0" id="final-score"></h2>
-        <p class="mb-5">Malaysian flags.</p>
-        <button class="btn btn-warning btn-sm" id='restart'>Play again</button>
+        <div class="row">
+          <div class="col-8 offset-2 col-md-6 offset-md-3">
+            <h1>Time's Up!</h1>
+            <p class="mb-0">You caught</p>
+            <h2 class="mb-0" id="final-score"></h2>
+            <p class="">Malaysian flags.</p>
+            <button class="btn btn-warning btn-sm mb-5" id='restart'>Play again</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8 offset-2 col-md-4 offset-md-4">
+            <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+            <a href="https://twitter.com/intent/tweet?button_hashtag=LoveTwitter&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #LoveTwitter</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
       </div>
     </div>
 

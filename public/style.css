@@ -58,3 +58,8 @@ button#start {
 .final-score p {
   font-size: 20px;
 }
+
+.fb-share-button, .fb-share-button iframe {
+	height: 100px;
+	width: 100px
+}
