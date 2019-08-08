@@ -61,10 +61,7 @@ button#start {
   font-size: 30px;
 }
 
-/* .final-score {
-  display: none;
-} */
-.game {
+.final-score {
   display: none;
 }
 
