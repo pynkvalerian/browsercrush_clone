@@ -63,7 +63,7 @@ function submitScore(score) {
     type: "GET",
     success: function(result) {
       $('form').css('display', 'none');
-      $('form').css('display', 'block');
+      $('.success-msg').css('display', 'block');
     },
     error: function(result) {
     }
