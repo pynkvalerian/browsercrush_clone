@@ -30,7 +30,7 @@ function popUpForeignFlag() {
 
 function shareButtonDimensions(id) {
   $(id).css('height', '50px');
-  $(id).css('width', '50px');
+  $(id).css('width', '100px');
 }
 
 function gameOver(finalScore) {
