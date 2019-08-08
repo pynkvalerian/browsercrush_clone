@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Merdeka - Are You fast Enough?</title>
+    <title>🇲🇾 How Many Flags Can You Catch?</title>
     <meta property="og:title" content="Merdeka - Are You Fast Enough?">
     <meta property="og:description" content="Collect as many Malaysian Flags as you can in 15 seconds! Share your top score by tagging #DnaNegarAku">
     <meta property="og:image" content="">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="application.js"></script>
@@ -18,6 +18,7 @@
   <body>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0&appId=388473914948715&autoLogAppEvents=1"></script>
+
     <div class='end'>
       <div class='final-score'>
         <div class="row">
@@ -26,12 +27,35 @@
             <p class="mb-0">You caught</p>
             <h2 class="mb-0" id="final-score"></h2>
             <p class="">Malaysian flags.</p>
-            <button class="btn btn-warning btn-sm mb-5" id='restart'>Play again</button>
+            <div class="mb-5">
+              <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+              <button class="btn btn-warning btn-sm" id='restart'>Play again</button>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-8 offset-2 col-md-4 offset-md-4">
-            <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+        <div class="row lead-form fixed-bottom py-3 bg-light">
+          <div class="col-10 offset-1 col-md-4 offset-md-4">
+            <h4>Enter your details to get<br/> 10% OFF <a href="https://www.advanxhealth.com/products/dna-explorer/">DNA Explorer</a>!</h4>
+            <form class="form">
+              <div class="form-row">
+                <div class="col-3">
+                  <label>Name:</label>
+                </div>
+                <div class="col-9">
+                  <input type="text" name="name" class="form-control">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-3">
+                  <label>Email:</label>
+                </div>
+                <div class="col-9">
+                  <input type="email" name="email" class="form-control">
+                </div>
+              </div>
+              <input type="submit" value="Submit" class="btn btn-primary">
+            </form>
+            <p class="success-msg">🇲🇾 You'll receive an email soon! 🎊</p>
           </div>
         </div>
       </div>
@@ -53,7 +77,6 @@
       <div class="intro">
         <h1>Grab As Many Malaysian Flags As You Can</h1>
         <h4>You have 15 seconds.</h4>
-        <h4>Can you make it onto the leaderboard?</h4>
         <button class="btn btn-danger" id='start'>Start!</button>
       </div>
 

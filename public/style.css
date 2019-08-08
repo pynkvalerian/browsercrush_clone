@@ -42,10 +42,14 @@ body {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.intro, .final-score {
+.intro {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.final-score {
+	margin-top: 20vh;
 }
 
 .panel-body {
@@ -57,7 +61,10 @@ button#start {
   font-size: 30px;
 }
 
-.final-score {
+/* .final-score {
+  display: none;
+} */
+.game {
   display: none;
 }
 
@@ -68,4 +75,8 @@ button#start {
 .fb-share-button, .fb-share-button iframe {
 	height: 100px;
 	width: 100px
+}
+
+.success-msg {
+	display: none;
 }
